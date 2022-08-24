@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,18 @@
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Rakan</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EEM89528TP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-EEM89528TP');
+    </script>
 </head>
 
 <body>
@@ -21,10 +34,9 @@
 
             <div id="typed-strings">
                 <p>I'm a CS Fresh Graduate.</p>
-                <p>I'm a Developer.</p>
+                <p>I'm a Web Developer.</p>
                 <p>I'm a Backend Developer.</p>
             </div>
-
             <span id="typed"></span>
         </div>
 
@@ -33,9 +45,12 @@
         <div class="socials">
             <a href="https://linkedin.com/in/rakanabusaidah" target="_blank" class="linkedin"><i
                     class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://wa.me/966558092212" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://github.com/rakanabusaidah" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
-            <a href="https://twitter.com/cyberakan" target="_blank" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://wa.me/966558092212" target="_blank" class="whatsapp"><i
+                    class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://github.com/rakanabusaidah" target="_blank" class="github"><i
+                    class="fa-brands fa-github"></i></a>
+            <a href="https://twitter.com/cyberakan" target="_blank" class="twitter"><i
+                    class="fa-brands fa-twitter"></i></a>
             <a href="mailto: rakanmya@gmail.com" target="_blank" class="email"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </div>
@@ -45,8 +60,20 @@
             stringsElement: '#typed-strings',
             typeSpeed: 70,
             backSpeed: 50,
-
             loop: true
+        });
+    </script>
+    <script>
+        document.addEventListener("click", function (event) {
+            if (event.target.tagName === 'I') {
+                gtag('event', 'link_click', {
+                    'link_text': event.target.className,
+                    'link_url': event.target.href,
+                    'link_id': event.target.id,
+                    'link_classes': event.target.className,
+                });
+            }
+
         });
     </script>
 </body>
