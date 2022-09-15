@@ -1,6 +1,4 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: "Courier New";
     background-color: #2b2b2b;
@@ -8,10 +6,12 @@
 
 .container {
     height: 50vh;
-    margin-top: 10%;
     color: #ffffff;
     text-align: center;
     line-height: 2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .title-card {
@@ -21,19 +21,14 @@
 
 hr {
     border: none;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin: 1em auto;
     height: 1px;
     background-color: #363636;
-    text-align: center;
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 20em;
 }
 
-.socials a {
-    margin-right: 15px;
-    margin-left: 15px;
+.socials a {    
+    margin: auto 0.6em;
     font-size: 25px;
     color: #ffffff;
 }
